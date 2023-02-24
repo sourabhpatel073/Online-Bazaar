@@ -6,7 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 export default class MyCarousel extends Component {
   render() {
     return (
-      <Carousel autoPlay={true} infiniteLoop={true}>
+      <Carousel autoPlay={true} infiniteLoop={true} width="100%">
         <div>
           <img
             src="https://cdn.shopclues.com/images/banners/2023/Feb/21/HB3_JDD_Web_Esha_21Feb23Rev.jpg"
