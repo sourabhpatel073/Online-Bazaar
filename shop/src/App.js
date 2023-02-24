@@ -9,13 +9,14 @@ import Footer from './Components/Footer';
 import TopRight from './Components/TopRight';
 import { Box, Flex } from '@chakra-ui/react';
 import Home from './Pages.jsx/Home';
+import AllRoutes from './Pages.jsx/AllRoutes';
 
 
 function App() {
   return (
     <div className="App">
       
-    <Home/>
+    <AllRoutes/>
     
     </div>
   );
