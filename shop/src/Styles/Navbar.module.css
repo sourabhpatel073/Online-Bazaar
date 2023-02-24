@@ -1,0 +1,28 @@
+
+
+.hoverdropdown {
+
+      height : 0px;
+
+      width : 900px;
+
+      overflow: hidden;
+
+      transition : all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+
+}
+
+.dropdown:hover ~ .hoverdropdown {
+
+       height : 600px;
+}
+
+
+
+.hoverdropdown:hover {
+
+    height : 600px;
+
+
+}

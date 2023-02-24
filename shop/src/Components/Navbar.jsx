@@ -14,6 +14,9 @@
 //     </Box>
 // }
 
+import style from '../Styles/Navbar.module.css'
+import Dropdown from './Dropdown.jsx';
+
 import { ReactNode } from 'react';
 import {
   Box,
@@ -41,19 +44,26 @@ import logo from "./r.png"
 const Links = [ <Image  width="50%" borderRadius="50%" src='https://t4.ftcdn.net/jpg/00/97/00/05/240_F_97000552_d8RwiZAnFewznisQphPtjyxxRNAAZQ92.jpg'/>,
 <Image width="50%" borderRadius="50%" src='https://t4.ftcdn.net/jpg/01/08/24/99/240_F_108249947_UMBLfSCpTWU6AGiUz0F7a524koG3eO0z.jpg'/>,
 <Image width="50%" borderRadius="50%" src='https://cdn-icons-png.flaticon.com/128/535/535285.png'/> ];
+
+
 const Links2=[ <Image width="80px" src="https://images.shopclues.com/images/ui/madeinindia.png"/>,"MOBILES & MORE","MEN","WOMEN","HOME & KITCHIN","APPLIENCES","SPORTS & MORE" ,"ESSENTIALS","OFFERS","GLOBAL SHOPING"]
+
 const NavLink = ({ children }= { children: ReactNode }) => (
   <Link
     px={2}
     py={1}
     rounded={'md'}
+    position = 'relative'
+    className = {style.dropdown}
     _hover={{
       textDecoration: 'none',
       bg: useColorModeValue('red.200', 'gray.700'),
+      // add styles here for dropdown
     }}
     href={'#'}>
     {children}
   </Link>
+
 );
 
 export default function Simple() {
@@ -93,6 +103,7 @@ export default function Simple() {
                 rounded={'full'}
                 variant={'link'}
                 cursor={'pointer'}
+           
                 minW={0}>
                 <Avatar
                   size={'sm'}
@@ -135,7 +146,17 @@ export default function Simple() {
               fontWeight="none">
             
               {Links2.map((link) => (
+                <>
                 <NavLink key={link}>{link}</NavLink>
+
+                            {/* Dropdown style */}
+
+                      <Box className = {style.hoverdropdown} bg = 'green' zIndex={2} w = '400px' position={'absolute'} top = '117px'>hello</Box>
+
+
+
+
+                  </>
               ))}
             </HStack>
      
