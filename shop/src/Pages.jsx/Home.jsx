@@ -2,23 +2,53 @@ import Navbar from '../Components/Navbar';
 import MyCarousel from '../Components/Slider';
 
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../Components/Footer';
 import TopRight from '../Components/TopRight';
 import { Box, Button, Flex, Grid, Heading ,Image,Text} from '@chakra-ui/react';
 import Login from './Login';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import axios from "axios"
 
 export default function Home(){
     const link=useNavigate()
+    const [data,srtdata]=useState([])
+    const [loading,setloadig]=useState(false)
+const val=''
+let page=1
+
+    useEffect(()=>{
+        setloadig(true)
+        axios.get(`https://63cd283efba6420d4d698593.mockapi.io/Products`, {
+    params: {
+      search: val,
+      page:page,
+      limit:'8'
+    }
+  })
+  .then(function (response) {
+    console.log(response);
+    setloadig(false)
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });  
+
+    },[])
+    
     return <div>
     <Box display="flex" justifyContent="space-around"> <Box>.</Box><Button bg="red.300" color='white' onClick={()=>{link("/admin")}}>Sale With us</Button></Box>
          <Navbar/>
         
      <Box w="95%" margin="auto" display="flex" marginTop="2%" >
       <MyCarousel /> <Box w="250%" ><TopRight/></Box>
+       </Box>
+       <Box>
+{loading?<Box><Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8UDrp2RsqyzGux9jK6jSbdu9f2sfPFZA6r9EvdZbEpbmCWqwcCz0kP0K8GogpY1FwcqM&usqp=CAU'/></Box>:<Grid>2</Grid>}
        </Box>
      <Heading marginRight="70%"  fontSize="2xl">Deals of the Day</Heading>
      <Box>
