@@ -5,7 +5,8 @@ const AuthcontextProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(true);
   const [Gdata, setGData] = useState([]);
   const [page, setPage] = useState(1);
-  const [Item, setItem] = useState([]);
+  const [Item, setItem] = useState({});
+  const[id,setId]=useState(1)
   const login = () => {
     setIsAuth(true);
   };
@@ -26,6 +27,7 @@ const AuthcontextProvider = ({ children }) => {
         setPage,
         Item,
         setItem,
+        id,setId
       }}
     >
       {children}

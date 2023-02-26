@@ -1,6 +1,7 @@
 // Note : import the the mentioned components from chakra UI and remove the follwoing once imported
 import {Button,Center,FormControl,Heading,Input} from "@chakra-ui/react"
 import{useState} from "react"
+import Navbar from "../Components/Navbar";
 //import axios from "axios";
 export default function Admin() {
   const [data,setData]=useState({
@@ -36,6 +37,7 @@ console.log("kk")
   }
   return (
     <div className="addCatContainer" >
+    <Navbar/>
     <Heading> <Center>Add Item</Center></Heading>
       <form className="form" onClick={(e)=>{HandleSub(e)}} >
         <FormControl w="60%" margin="auto" style={{background:"black",color:"white"}}>
