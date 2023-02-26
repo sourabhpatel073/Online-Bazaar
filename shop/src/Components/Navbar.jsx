@@ -40,8 +40,10 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import logo from "./r.png"
 import { Link as MyLink} from 'react-router-dom';
-
-
+import { Authcontext } from '../Context/AuthContext';
+import { useContext } from 'react';
+import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 const Links = [ <Image  width="50%" borderRadius="50%" src='https://t4.ftcdn.net/jpg/00/97/00/05/240_F_97000552_d8RwiZAnFewznisQphPtjyxxRNAAZQ92.jpg'/>,
 <Image width="50%" borderRadius="50%" src='https://t4.ftcdn.net/jpg/01/08/24/99/240_F_108249947_UMBLfSCpTWU6AGiUz0F7a524koG3eO0z.jpg'/>,
 <Image width="50%" borderRadius="50%" src='https://cdn-icons-png.flaticon.com/128/535/535285.png'/> ];
@@ -69,7 +71,27 @@ const NavLink = ({ children }= { children: ReactNode }) => (
 
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+const link=useNavigate()
 
+  const {
+    isAuth,
+    login,
+    logout,
+    setGData,
+    Gdata,
+    page,
+    setPage,
+    Item,
+    setItem,
+  } = useContext(Authcontext);
+
+  const SearchData = (val) => {
+    let url = `https://63cd283efba6420d4d698593.mockapi.io/Products?search=${val}&page=${page}&limit=8`;
+    // `https://jsonplaceholder.typicode.com/todos?_limit=10&_page=${page}`
+    axios.get(url).then((res) => {
+      setGData(res.data);
+    });
+  };
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
@@ -82,8 +104,10 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={50}  >
-            <Box width="15%"><Image width="25%" height="8%" borderRadius="50%" src={logo}/></Box>
-            <HStack   width="45%"><Input placeholder='What is on your Mind'/>, <Button background= 'orange.300' color="white">Search</Button></HStack>
+            <Box width="15%" onClick={()=>{link("/")}}><Image width="65%" height="8%" borderRadius="50%" src={logo} /></Box>
+            <HStack   width="45%"><Input placeholder='What is on your Mind' onChange={(e)=>{
+              SearchData(e.target.value)
+            }}/>, <Button background= 'orange.300' color="white">Search</Button></HStack>
             <HStack
             width="25%"
               as={'nav'}
