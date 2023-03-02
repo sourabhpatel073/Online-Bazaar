@@ -1,7 +1,7 @@
 import Navbar from "../Components/Navbar";
 import MyCarousel from "../Components/Slider";
 
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Footer from "../Components/Footer";
 import TopRight from "../Components/TopRight";
 import { useSearchParams } from "react-router-dom";
@@ -15,13 +15,13 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import Login from "./Login";
+
 
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useContext } from "react";
-import AuthcontextProvider, { Authcontext } from "../Context/AuthContext";
-import { m } from "framer-motion";
+import  { Authcontext } from "../Context/AuthContext";
+
 import Pagination from "../Components/Pagination";
 import TopButton from "../Components/TopButton";
 

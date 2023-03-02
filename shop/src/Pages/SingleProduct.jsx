@@ -1,9 +1,9 @@
-import { Center, Heading, Link } from "@chakra-ui/react";
+import { Center, Heading } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import { Authcontext } from "../Context/AuthContext";
-import { useContext,useEffect } from "react";
-import axios from "axios";
+import { useContext } from "react";
+
 export default function SingleProduct(){
 
     const {

@@ -17,7 +17,7 @@
 import style from '../Styles/Navbar.module.css'
 import Dropdown from './Dropdown.jsx';
 
-import { ReactNode } from 'react';
+
 import {
   Box,
   Image,
@@ -51,7 +51,7 @@ const Links = [ <Image  width="50%" borderRadius="50%" src='https://t4.ftcdn.net
 
 const Links2=[ <Image width="80px" src="https://images.shopclues.com/images/ui/madeinindia.png"/>,"MOBILES & MORE","MEN","WOMEN","HOME & KITCHIN","APPLIENCES","SPORTS & MORE" ,"ESSENTIALS","OFFERS","GLOBAL SHOPING"]
 
-const NavLink = ({ children }= { children: ReactNode }) => (
+const NavLink = ({ children }) => (
   <Link
     px={2}
     py={1}
@@ -63,13 +63,13 @@ const NavLink = ({ children }= { children: ReactNode }) => (
       bg: useColorModeValue('red.200', 'gray.700'),
       // add styles here for dropdown
     }}
-    href={'#'}>
+    >
     {children}
   </Link>
 
 );
 
-export default function Simple() {
+export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 const link=useNavigate()
 
@@ -114,7 +114,7 @@ const link=useNavigate()
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={Math.random() + Date.now()}>{link}</NavLink>
               ))}
             </HStack>
             <HStack> 
@@ -152,7 +152,7 @@ const link=useNavigate()
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={Math.random() + Date.now()}>{link}</NavLink>
               ))}
             </Stack>
           </Box>
@@ -171,7 +171,7 @@ const link=useNavigate()
             
               {Links2.map((link) => (
                 <>
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={Math.random() + Date.now()}>{link}</NavLink>
 
                             {/* Dropdown style */}
 
