@@ -8,7 +8,7 @@
 
 <br/>
 <h3 align="justify" width="80%">
-Online Bazaar is a healthcare platform that provides access to a wide range of health products and services in India. The platform allows users to buy medicines, health supplements, and wellness products, book diagnostic tests and doctor consultations, and access health information and tools. With a user-friendly interface and a focus on affordability and convenience, 1mg aims to make healthcare more accessible and transparent for everyone.</h3>
+Online Bazaar is a E-commerce platform that provides access to a wide range of  products in India. The platform allows users to buy medicines, health supplements, and wellness products, book diagnostic tests and doctor consultations, and access health information and tools. With a user-friendly interface and a focus on affordability and convenience, 1mg aims to make healthcare more accessible and transparent for everyone.</h3>
 
 <br/>
 
@@ -45,17 +45,14 @@ Online Bazaar is a healthcare platform that provides access to a wide range of h
    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"  align="center" alt="github"/>
    <img src = "https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white" align="center" alt="npm">
    <img src="https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white"  align="center" alt="vscode"/>
-   <img src ="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" align="center" alt="render">
      <br />
      <br />
 
    <img src="https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white"  align="center" alt="vscode"/>
-   <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" align="center" alt="slack"/>
  </div>
 </div>
 <div align="center"><h3 align="center">Deployed On:</h3>
   <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"  alt="vercel"/>
-  <img src="https://img.shields.io/badge/cyclic-5458F6?style=for-the-badge&logo=cyclic&logoColor=white" alt="cyclic" />
 </div>
 </p>
 
@@ -96,15 +93,7 @@ Online Bazaar is a healthcare platform that provides access to a wide range of h
 
 <br/><br/>
  
-# Our Team :
 
- <ul>
-	<li><a href="https://github.com/AyushiVashisth">Ayushi Vashisth (Team Lead)</a></li>
-        <li><a href="https://github.com/ankush3681">Ankush Kumar (Team Member)</a></li>
-        <li><a href="https://github.com/Aajad2002">Aajad Kumar Prajapat(Team Member)</a> </li>
-        <li><a href="https://github.com/sourabhpatel073">Sourabh Patel (Team Member)</a></li>
-        <li><a href="https://github.com/akshay123332">Akshay Kumar (Team Member)</a></li>
-  </ul>
 
 ### This is a Individual project built by Sourabh Patel .
 
