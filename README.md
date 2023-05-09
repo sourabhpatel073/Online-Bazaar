@@ -8,14 +8,10 @@
 
 <br/>
 <h3 align="justify" width="80%">
-Online Bazaar is a E-commerce platform that provides access to a wide range of  products in India. The platform allows users to buy medicines, health supplements, and wellness products, book diagnostic tests and doctor consultations, and access health information and tools. With a user-friendly interface and a focus on affordability and convenience, 1mg aims to make healthcare more accessible and transparent for everyone.</h3>
+Online Bazaar is a  online platform that allows businesses to sell their products and services directly to consumers over the internet. It typically includes a catalog of products or services that customers can browse, select and purchase, along with features such as shopping cart, checkout, and payment processing.</h3>
 
 <br/>
-
-### Frontend Deployed URL 👉 [Click here]()
-
-//image link
-
+### Frontend Deployed URL 👉 [Click here](https://onlinebazar.vercel.app/)
 <br/>
 
 
