@@ -71,8 +71,8 @@ Online Bazaar is a  online platform that allows businesses to sell their product
  # Languages Used :
 
 <ul dir="auto">
- <ol dir="auto">◉ JavaScript : 98.4%</ol>
- <ol dir="auto">◉ Others : 1.6%</ol>
+ <ol dir="auto">◉ JavaScript : 94.5%</ol>
+ <ol dir="auto">◉ Others : 4.5%</ol>
  </ul>
  
 ### This report is provided by the Github language used stats. So, this is the total percentage of the coding languages.
