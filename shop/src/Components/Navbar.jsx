@@ -36,6 +36,7 @@ import {
   useColorModeValue,
   Stack,
   Input,
+  Icon,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import logo from "./r.png"
@@ -44,9 +45,14 @@ import { Authcontext } from '../Context/AuthContext';
 import { useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-const Links = [ <Image  width="50%" borderRadius="50%" src='https://t4.ftcdn.net/jpg/00/97/00/05/240_F_97000552_d8RwiZAnFewznisQphPtjyxxRNAAZQ92.jpg'/>,
-<Image width="50%" borderRadius="50%" src='https://t4.ftcdn.net/jpg/01/08/24/99/240_F_108249947_UMBLfSCpTWU6AGiUz0F7a524koG3eO0z.jpg'/>,
-<Image width="50%" borderRadius="50%" src='https://cdn-icons-png.flaticon.com/128/535/535285.png'/> ];
+import {GiShoppingCart } from 'react-icons/gi'
+import {IoIosNotificationsOutline } from 'react-icons/io'
+import {BsHeart } from 'react-icons/bs'
+
+
+const Links = [ <MyLink to="/cart"><Icon w="20px" h={"20px"} color={"teal"}  as={GiShoppingCart}  /></MyLink> ,
+<Icon w="20px" h={"20px"}  color={"teal"} as={IoIosNotificationsOutline} />,
+<MyLink to="/wishlist"><Icon w="15px" h={"15px"} color={"teal"} as={BsHeart} /></MyLink>];
 
 
 const Links2=[ <Image width="80px" src="https://images.shopclues.com/images/ui/madeinindia.png"/>,"MOBILES & MORE","MEN","WOMEN","HOME & KITCHIN","APPLIENCES","SPORTS & MORE" ,"ESSENTIALS","OFFERS","GLOBAL SHOPING"]
@@ -103,16 +109,19 @@ const link=useNavigate()
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={50}  >
-            <Box width="15%" onClick={()=>{link("/")}}><Image width="65%" height="8%" borderRadius="50%" src={logo} /></Box>
-            <HStack   width="45%"><Input placeholder='What is on your Mind' onChange={(e)=>{
+          <HStack spacing={10}  >
+            <Box width="40%" onClick={()=>{link("/")}}><Image width={["50%","35%","35%","30%","35%","35%"]} height={["100%","50%","50%","50%","50%","50%"]} borderRadius="10%" src={logo} /></Box>
+            <HStack   width="80%"><Input placeholder='What is on your Mind' onChange={(e)=>{
               SearchData(e.target.value)
             }}/>, <Button background= 'orange.300' color="white">Search</Button></HStack>
             <HStack
-            width="25%"
+            width="45%"
               as={'nav'}
               spacing={4}
-              display={{ base: 'none', md: 'flex' }}>
+              display={{ base: 'none', md: 'flex' }}
+              justifyContent="space-between" 
+              paddingLeft="45px"
+              >
               {Links.map((link) => (
                 <NavLink key={Math.random() + Date.now()}>{link}</NavLink>
               ))}

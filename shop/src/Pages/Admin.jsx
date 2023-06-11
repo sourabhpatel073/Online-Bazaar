@@ -29,11 +29,11 @@ export default function Admin() {
   
   function HandleSub(e){
     e.preventDefault()
-console.log("kk")
+console.log(data)
 axios({
   method:"POST",
   url:`https://mydatabase-qrto.onrender.com/products`,
-  data:{data}
+  data:{...data}
 }).then((res)=>{
   console.log(res)
 })
@@ -70,10 +70,10 @@ Image:""})
     console.log(Mdata)
     axios({
       method:"PATCH",
-      url:`https://mydatabase-qrto.onrender.com/products`,
-      data:{Mdata}
+      url:`https://mydatabase-qrto.onrender.com/products/${Mdata.id}`,
+      data:{...Mdata}
     }).then((res)=>{
-      console.log(res)
+      console.log(Mdata)
     })
       setMData({id:"",
       name:"",

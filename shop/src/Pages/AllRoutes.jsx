@@ -7,6 +7,7 @@ import Login from "./Login"
 import Payment from "./Payment"
 import Signup from "./Signup"
 import SingleProduct from "./SingleProduct"
+import { Wishlist } from "./Wishlist"
 export default function AllRoutes(){
 return <div>
     <Routes>
@@ -18,6 +19,7 @@ return <div>
       <Route path="*" element={<NotFount/>}/>
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/payment" element={<Payment/>}/>
+    <Route path="/wishlist"  element={<Wishlist/>} />
     </Routes>
 </div>
 }
