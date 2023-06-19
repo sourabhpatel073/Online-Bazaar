@@ -1,35 +1,43 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./CartDisplayProduct.css";
-import { addItemQuantity, getCart, reduceItemQuantity } from "./useHandleCart";
+import { addItemQuantity, reduceItemQuantity } from "./useHandleCart";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 function CartDisplayProduct(props) {
   const [quantity, setQuantity] = useState(props.quantity);
 
   const seller = " MediGreen ";
-  const { id, name, image, price, rating, handleRemove, calculateTotalPrice } =
+  const { id, name, image, price, rating,setState, handleRemove, calculateTotalPrice ,item} =
     props;
-
+const dispatch=useDispatch()
   function handleReduce() {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-    reduceItemQuantity(id);
-    props.setCartItems(getCart());
-    // calculateTotalPrice();
+    
+    setState((prev)=>!prev)
+    setQuantity(quantity-1)
+    // if (quantity > 1) {
+    //   setQuantity(quantity - 1);
+    // }
+    // reduceItemQuantity(id);
+    // props.setCartItems(getCart());
+   
+    
   }
 
+
   function handleAdd() {
-    setQuantity(quantity + 1);
-    addItemQuantity(id);
-    props.setCartItems(getCart());
-    // calculateTotalPrice();
+    
+    setState((prev)=>!prev)  
+   setQuantity(quantity+1)
   }
 
   if (quantity === 0) {
     return null;
   }
+
+  
+ 
   return (
     <div className="single-cart-product-card">
       <div className="cart-card-flex">

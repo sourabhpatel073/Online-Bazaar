@@ -12,24 +12,14 @@ import { Scroller } from "./scroller";
 
 
 function CartPage(props) {
-  const cartItemst = getCart();
-  
+  const cartItemst =JSON.parse(localStorage.getItem("item"));
+  console.log(cartItemst)
 
-  const [cartItems, setCartItems] = useState(getCart() || []);
+  const [cartItems, setCartItems] = useState([cartItemst] || []);
   const [cartItemsCount, setCartItemsCount] = useState(cartItemst.length);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const [address, setAddress] = useState(
-    JSON.parse(localStorage.getItem("userAddress")) || {
-      address: "",
-      locality: "",
-      city: "",
-      state: "",
-      pincode: "",
-      landmark: "",
-      isthere: false,
-    }
-  );
+  
 
   const [open, setOpen] = useState(false);
   const [orderPlaceOpen, setOrderPlaceOpen] = useState(false);
@@ -88,7 +78,7 @@ function CartPage(props) {
                 key={item.id}
                 id={item.id}
                 name={item.name}
-                image={item.image}
+                image={item.image1}
                 price={+item.price}
                 rating={item.rating}
                 quantity={1}  

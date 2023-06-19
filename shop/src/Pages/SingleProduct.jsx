@@ -20,29 +20,16 @@ export default function SingleProduct(){
       } = useContext(Authcontext);
     const link=useNavigate()
    
+function save(item){
 
-    // useEffect(() => {
-       
-    //     axios
-    //       .get(`https://63cd283efba6420d4d698593.mockapi.io/Products/:${id}`
-    //       )
-    //       .then(function (response) {
-    //         console.log(response);
-    //         setItem(response.data);
-            
-    //       })
-    //       .catch(function (error) {
-    //         console.log(error);
-    //       })
-    //       .finally(function () {
-    //         // always executed
-    //       });
-    //   }, []);
+  localStorage.setItem("item",JSON.stringify(item))
+}
 
-      console.log(Item)
+      //console.log(Item)
     return <div>
     
-  <Navbar/>
+      <Navbar/>
+      
        <Heading><Center>Products Details</Center></Heading>
        {
         <div
@@ -86,7 +73,9 @@ export default function SingleProduct(){
                   color: "white",
                   borderRadius: "15px",
                 }}
-                onClick={()=>{link("/cart")}}
+                onClick={()=>{
+                  save(Item)
+                  link("/cart")}}
               >
                 Add T0 Cart
               </button>
